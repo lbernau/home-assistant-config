@@ -1,0 +1,113 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+homeassistant:
+  name: Home
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: 24
+  unit_system: metric
+  currency: EUR
+  time_zone: "Europe/Berlin"
+
+knx: !include integrations/knx.yaml
+
+lovelace:
+  resources:
+  - url: /local/hass-shutter-card.js
+    type: module
+
+# todo 
+sensor:
+  - platform: command_line
+    name: RPi CPU Temperature
+    command: "cat /sys/class/thermal/thermal_zone0/temp"
+    value_template: "{{ value | multiply(0.001) | round(2) }}"
+  - platform: mqtt
+    name: "EHZ In Total"
+    state_topic: "ehz/in/total"
+    unit_of_measurement: "kWh"
+    unique_id: "ehz_in_total"
+    device_class: "energy"
+    state_class: "total_increasing"
+    last_reset_value_template: '1970-01-01T00:00:00+00:00'
+  - platform: mqtt
+    name: "EHZ In Current"
+    state_topic: "ehz/in/current"
+    unit_of_measurement: "W"
+    unique_id: "ehz_in_current"
+    device_class: "energy"
+    state_class: "measurement"
+    last_reset_value_template: '1970-01-01T00:00:00+00:00'
+  - platform: mqtt
+    name: "EHZ Out Total"
+    state_topic: "ehz/out/total"
+    unit_of_measurement: "kWh"
+    unique_id: "ehz_out_total"
+    device_class: "energy"
+    state_class: "total_increasing"
+    last_reset_value_template: '1970-01-01T00:00:00+00:00'
+  - platform: mqtt
+    state_topic: "mainsailos/klipper/status"
+    name: "Extruder"
+    unit_of_measurement: "°C"
+    unique_id: "extruder_temp"
+    value_template: "{{ value_json.status.extruder.temperature }}"
+  - platform: systemmonitor
+    resources:
+      - type: disk_use_percent
+        arg: /config
+      - type: disk_use
+      - type: disk_free
+      - type: memory_use_percent
+      - type: memory_use
+      - type: memory_free
+      - type: swap_use_percent
+      - type: swap_use
+      - type: swap_free
+      - type: load_1m
+      - type: load_5m
+      - type: load_15m
+      - type: network_in
+        arg: eth0
+      - type: network_out
+        arg: eth0
+      - type: throughput_network_in
+        arg: eth0
+      - type: throughput_network_out
+        arg: eth0
+      - type: packets_in
+        arg: eth0
+      - type: packets_out
+        arg: eth0
+      - type: ipv4_address
+        arg: eth0
+      - type: ipv6_address
+        arg: eth0
+      - type: processor_use
+      - type: processor_temperature
+      - type: last_boot
+
+mqtt:
+  sensor:
+    - state_topic: "mainsailos/klipper/status"
+      name: "Heater Bed"
+      unit_of_measurement: "°C"
+      unique_id: "heater_bed"
+      value_template: "{{ value_json.status.heater_bed.temperature }}"
+
+template:
+  - sensor:
+    - name: 'Harmony Remote'
+      state: >
+        {{ state_attr('remote.wohnzimmer', 'current_activity') }}

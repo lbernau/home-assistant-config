@@ -1,0 +1,11 @@
+binary_sensor: !include_dir_list ../entities/knx/binary_sensors
+button: !include_dir_list ../entities/knx/buttons
+cover: !include_dir_list ../entities/knx/covers
+fan: !include_dir_list ../entities/knx/fans
+light: !include_dir_list ../entities/knx/lights
+notify: !include_dir_list ../entities/knx/notifies
+number: !include_dir_list ../entities/knx/numbers
+scene: !include_dir_list ../entities/knx/scences
+sensor: !include_dir_list ../entities/knx/sensors
+switch: !include_dir_list ../entities/knx/switches
+weather: !include_dir_list ../entities/knx/weather

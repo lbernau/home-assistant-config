@@ -1,0 +1,25 @@
+# Generic ignores
+*.log*
+*.db
+*.db-shm
+*.db-wal
+*.pyc
+._*
+__pycache__
+
+# Directory (contents) ignore
+.cloud
+.storage
+deps
+
+# Specific file ignores
+secrets.yaml
+.uuid
+.vscode
+
+# Specific keeps
+!.gitkeep
+
+.spotify-token-cache
+webostv.conf
+harmony_14744884.conf

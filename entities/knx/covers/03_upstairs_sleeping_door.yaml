@@ -1,0 +1,9 @@
+name: Rolladen Schlafzimmer Tür
+move_long_address: 3/3/2
+stop_address: 3/3/3
+position_address: 3/3/4
+position_state_address: 3/3/5
+travelling_time_up: 23
+travelling_time_down: 21
+invert_position: false
+device_class: shutter
