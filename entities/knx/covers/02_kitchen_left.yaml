@@ -1,0 +1,9 @@
+name: Rolladen Küche links
+move_long_address: 2/3/30
+stop_address: 2/3/31
+position_address: 2/3/33
+position_state_address: 2/3/34
+travelling_time_up: 23
+travelling_time_down: 21
+invert_position: false
+device_class: shutter

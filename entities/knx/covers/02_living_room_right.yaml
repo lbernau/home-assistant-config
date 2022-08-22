@@ -1,0 +1,9 @@
+name: Rolladen Wohnzimmer rechts
+move_long_address: 2/3/10
+stop_address: 2/3/11
+position_address: 2/3/13
+position_state_address: 2/3/14
+travelling_time_up: 23
+travelling_time_down: 21
+invert_position: false
+device_class: shutter

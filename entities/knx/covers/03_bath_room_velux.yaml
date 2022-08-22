@@ -1,0 +1,9 @@
+name: Rolladen Badezimmer Velux
+move_long_address: 3/3/70
+stop_address: 3/3/71
+position_address: 3/3/72
+position_state_address: 3/3/73
+travelling_time_up: 23
+travelling_time_down: 21
+invert_position: false
+device_class: shutter

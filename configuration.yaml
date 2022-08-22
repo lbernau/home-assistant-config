@@ -44,7 +44,7 @@ sensor:
   - platform: mqtt
     name: "EHZ In Current"
     state_topic: "ehz/in/current"
-    unit_of_measurement: "W"
+    unit_of_measurement: "Wh"
     unique_id: "ehz_in_current"
     device_class: "energy"
     state_class: "measurement"

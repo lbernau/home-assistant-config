@@ -1,0 +1,9 @@
+name: Rolladen Badezimmer Fenster
+move_long_address: 3/3/61
+stop_address: 3/3/62
+position_address: 3/3/63
+position_state_address: 3/3/64
+travelling_time_up: 23
+travelling_time_down: 21
+invert_position: false
+device_class: shutter

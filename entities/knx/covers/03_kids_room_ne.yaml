@@ -1,0 +1,9 @@
+name: Rolladen Nele
+move_long_address: 3/3/21
+stop_address: 3/3/22
+position_address: 3/3/23
+position_state_address: 3/3/24
+travelling_time_up: 23
+travelling_time_down: 21
+invert_position: false
+device_class: shutter

@@ -1,0 +1,9 @@
+name: Rolladen Moritz
+move_long_address: 3/3/41
+stop_address: 3/3/42
+position_address: 3/3/43
+position_state_address: 3/3/44
+travelling_time_up: 23
+travelling_time_down: 21
+invert_position: false
+device_class: shutter
