@@ -1,0 +1,14 @@
+name: Keller Heizen Waschen
+temperature_address: 1/4/3 # 'Ist'-Temperatur
+min_temp: 17.0
+max_temp: 20.0
+target_temperature_address: 1/4/7 # 'Basis-Soll'-Temperatur (schreiben)
+target_temperature_state_address: 1/4/8 # 'Soll'-Temperatur (lesen)
+operation_mode_address: 1/4/4 # 'Betriebsart'
+operation_mode_state_address: 1/4/5 # 'Betriebsart-Status'
+command_value_state_address: 1/4/1 # 'Stellwert'
+operation_modes:
+  - Comfort
+  - Standby
+  - Night
+  - Frost Protection

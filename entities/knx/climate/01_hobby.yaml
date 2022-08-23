@@ -1,0 +1,14 @@
+name: Keller Heizen Hobby
+temperature_address: 1/4/42 # 'Ist'-Temperatur
+min_temp: 17.0
+max_temp: 22.0
+target_temperature_address: 1/4/45 # 'Basis-Soll'-Temperatur (schreiben)
+target_temperature_state_address: 1/4/46 # 'Soll'-Temperatur (lesen)
+operation_mode_address: 1/4/43 # 'Betriebsart'
+operation_mode_state_address: 1/4/44 # 'Betriebsart-Status'
+command_value_state_address: 1/4/40 # 'Stellwert'
+operation_modes:
+  - Comfort
+  - Standby
+  - Night
+  - Frost Protection
