@@ -1,0 +1,14 @@
+name: Erdgeschoss Heizen Wohnzimmer
+temperature_address: 2/4/3 # 'Ist'-Temperatur
+min_temp: 17.0
+max_temp: 22.0
+target_temperature_address: 2/4/6 # 'Basis-Soll'-Temperatur (schreiben)
+target_temperature_state_address: 2/4/7 # 'Soll'-Temperatur (lesen)
+operation_mode_address: 2/4/4 # 'Betriebsart'
+operation_mode_state_address: 2/4/5 # 'Betriebsart-Status'
+command_value_state_address: 2/4/1 # 'Stellwert'
+operation_modes:
+  - Comfort
+  - Standby
+  - Night
+  - Frost Protection

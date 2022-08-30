@@ -1,0 +1,3 @@
+name: Obergeschoss Rauchmelder Nele
+state_address: 0/4/7
+device_class: smoke

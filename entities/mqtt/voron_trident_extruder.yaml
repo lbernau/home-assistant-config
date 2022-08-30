@@ -1,0 +1,4 @@
+state_topic: "mainsailos/klipper/status"
+name: "Voron Trident Extruder Temperatur"
+unit_of_measurement: "°C"
+value_template: "{{ value_json.status.extruder.temperature }}"

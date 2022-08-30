@@ -1,0 +1,4 @@
+state_topic: "mainsailos/klipper/status"
+name: "Voron Trident Bett Temperatur"
+unit_of_measurement: "°C"
+value_template: "{{ value_json.status.heater_bed.temperature }}"

@@ -1,0 +1,14 @@
+name: Obergeschoss Heizen Bad
+temperature_address: 3/4/52 # 'Ist'-Temperatur
+min_temp: 17.0
+max_temp: 22.0
+target_temperature_address: 3/4/55 # 'Basis-Soll'-Temperatur (schreiben)
+target_temperature_state_address: 3/4/56 # 'Soll'-Temperatur (lesen)
+operation_mode_address: 3/4/53 # 'Betriebsart'
+operation_mode_state_address: 3/4/54 # 'Betriebsart-Status'
+command_value_state_address: 3/4/50 # 'Stellwert'
+operation_modes:
+  - Comfort
+  - Standby
+  - Night
+  - Frost Protection

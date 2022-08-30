@@ -21,6 +21,7 @@ homeassistant:
   time_zone: "Europe/Berlin"
 
 knx: !include integrations/knx.yaml
+mqtt: !include integrations/mqtt.yaml
 
 lovelace:
   resources:
@@ -57,12 +58,6 @@ sensor:
     device_class: "energy"
     state_class: "total_increasing"
     last_reset_value_template: '1970-01-01T00:00:00+00:00'
-  - platform: mqtt
-    state_topic: "mainsailos/klipper/status"
-    name: "Extruder"
-    unit_of_measurement: "°C"
-    unique_id: "extruder_temp"
-    value_template: "{{ value_json.status.extruder.temperature }}"
   - platform: systemmonitor
     resources:
       - type: disk_use_percent
@@ -97,14 +92,6 @@ sensor:
       - type: processor_use
       - type: processor_temperature
       - type: last_boot
-
-mqtt:
-  sensor:
-    - state_topic: "mainsailos/klipper/status"
-      name: "Heater Bed"
-      unit_of_measurement: "°C"
-      unique_id: "heater_bed"
-      value_template: "{{ value_json.status.heater_bed.temperature }}"
 
 template:
   - sensor:

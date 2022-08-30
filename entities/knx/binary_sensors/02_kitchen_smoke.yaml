@@ -1,0 +1,3 @@
+name: Ergeschoss Rauchmelder Küche
+state_address: 0/4/5
+device_class: smoke
