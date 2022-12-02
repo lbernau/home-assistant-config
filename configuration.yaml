@@ -39,7 +39,7 @@ lovelace:
   - url: /hacsfiles/simple-thermostat/simple-thermostat.js
     type: module
   - url: /local/vertical-stack-in-card.js?v=0.4.4
-    type: js
+    type: module
   - url: /local/mini-graph-card-bundle.js?v=0.11.0
     type: module
     
