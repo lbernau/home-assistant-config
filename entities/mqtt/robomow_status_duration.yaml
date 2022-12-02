@@ -1,0 +1,3 @@
+state_topic: "mower/mower/status/duration"
+name: "Maehroboter Zeit im aktuellen Status"
+unit_of_measurement: "min"

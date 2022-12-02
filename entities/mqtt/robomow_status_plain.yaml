@@ -1,0 +1,3 @@
+state_topic: "mower/mower/status/plain"
+name: "Maehroboter status"
+icon: mdi:list-status

@@ -1,0 +1,11 @@
+name: Wetterstation
+address_temperature: 0/3/10
+address_brightness_south: 0/3/20
+address_brightness_west: 0/3/20
+address_brightness_east: 0/3/20
+address_brightness_north: 0/3/20
+address_wind_speed: 0/3/40
+address_rain_alarm: 0/3/19
+#address_frost_alarm: "7/0/6"
+#address_wind_alarm: "7/0/7"
+#address_day_night: "7/0/8"

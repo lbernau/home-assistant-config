@@ -1,0 +1,3 @@
+name: Alarmmeldug Erdgeschoss
+state_address: 0/2/14
+device_class: occupancy

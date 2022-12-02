@@ -1,0 +1,4 @@
+state_topic: "mower/mower/blades/hours"
+name: "Maehroboter Messer Alter (Mähstunden)"
+icon: mdi:terraform
+unit_of_measurement: "h"

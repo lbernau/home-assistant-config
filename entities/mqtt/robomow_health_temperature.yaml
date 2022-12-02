@@ -1,0 +1,3 @@
+state_topic: "mower/health/climate/temperature"
+name: "Maehroboter Temperatur"
+unit_of_measurement: "°C"

@@ -1,0 +1,3 @@
+state_topic: "mower/weather/data/break"
+name: "Maehroboter Wetterstop"
+icon: mdi:stop

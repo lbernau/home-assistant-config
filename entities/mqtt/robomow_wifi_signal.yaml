@@ -1,0 +1,4 @@
+state_topic: "mower/wlan/rssi"
+name: "Maehroboter wifi signal"
+unit_of_measurement: "dBm"
+icon: mdi:wifi

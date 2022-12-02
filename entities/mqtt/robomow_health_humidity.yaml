@@ -1,0 +1,3 @@
+state_topic: "mower/health/climate/humidity"
+name: "Maehroboter Luftfeuchtigkeit"
+unit_of_measurement: "%"

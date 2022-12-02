@@ -19,45 +19,55 @@ homeassistant:
   unit_system: metric
   currency: EUR
   time_zone: "Europe/Berlin"
+  
+api:
 
 knx: !include integrations/knx.yaml
 mqtt: !include integrations/mqtt.yaml
+
+frontend:
+  themes: !include_dir_merge_named themes
 
 lovelace:
   resources:
   - url: /local/hass-shutter-card.js
     type: module
+  - url: /local/shutter-row.js
+    type: module
+  - url: https://cdn.jsdelivr.net/gh/bramkragten/custom-ui@master/swipe-card/swipe-card.js
+    type: module
+  - url: /hacsfiles/simple-thermostat/simple-thermostat.js
+    type: module
+  - url: /local/vertical-stack-in-card.js?v=0.4.4
+    type: js
+  - url: /local/mini-graph-card-bundle.js?v=0.11.0
+    type: module
+    
+# Example configuration.yaml entry for the Telegram Bot
+telegram_bot:
+  - platform: polling
+    api_key: !secret telegram-api-key
+    allowed_chat_ids:
+      - !secret telegram-chat-id
+      - !secret telegram-group-chat-id
+
+# Example configuration.yaml entry for the notifier
+notify:
+  - platform: telegram
+    name: telegram_smarthome
+    chat_id: !secret telegram-chat-id
+  - platform: telegram
+    name: telegram_family
+    chat_id: !secret telegram-group-chat-id
 
 # todo 
 sensor:
+  - platform: edl21
+    serial_port: /dev/serial/by-id/usb-Silicon_Labs_USB-IR-Kopf_001DDE3A-if00-port0
   - platform: command_line
     name: RPi CPU Temperature
     command: "cat /sys/class/thermal/thermal_zone0/temp"
     value_template: "{{ value | multiply(0.001) | round(2) }}"
-  - platform: mqtt
-    name: "EHZ In Total"
-    state_topic: "ehz/in/total"
-    unit_of_measurement: "kWh"
-    unique_id: "ehz_in_total"
-    device_class: "energy"
-    state_class: "total_increasing"
-    last_reset_value_template: '1970-01-01T00:00:00+00:00'
-  - platform: mqtt
-    name: "EHZ In Current"
-    state_topic: "ehz/in/current"
-    unit_of_measurement: "Wh"
-    unique_id: "ehz_in_current"
-    device_class: "energy"
-    state_class: "measurement"
-    last_reset_value_template: '1970-01-01T00:00:00+00:00'
-  - platform: mqtt
-    name: "EHZ Out Total"
-    state_topic: "ehz/out/total"
-    unit_of_measurement: "kWh"
-    unique_id: "ehz_out_total"
-    device_class: "energy"
-    state_class: "total_increasing"
-    last_reset_value_template: '1970-01-01T00:00:00+00:00'
   - platform: systemmonitor
     resources:
       - type: disk_use_percent

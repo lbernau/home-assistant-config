@@ -1,0 +1,7 @@
+name: Rolladen Zentral
+move_long_address: 0/0/11
+stop_address: 0/0/12
+travelling_time_up: 23
+travelling_time_down: 21
+invert_position: false
+device_class: shutter

@@ -1,0 +1,3 @@
+state_topic: "mower/health/voltage/int33"
+name: "Maehroboter Operating Voltage Robonect"
+unit_of_measurement: "V"

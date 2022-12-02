@@ -1,0 +1,4 @@
+state_topic: "mower/mower/blades/quality"
+name: "Maehroboter Messerqualitaet"
+icon: mdi:terraform
+unit_of_measurement: "%"

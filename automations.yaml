@@ -1,1 +1,45 @@
-[]
+- id: '1664948661857'
+  alias: Hektor Fehler
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - sensor.maehroboter_fehlercode
+    from: '0'
+  condition: []
+  action:
+  - service: notify.telegram_family
+    data:
+      message: 'Achtung Mäher gestört: {{ states(''sensor.maehroboter_fehlernachricht'')}}'
+  mode: single
+- id: '1665053135794'
+  alias: Türklingel
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - binary_sensor.turklingel
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - service: notify.telegram_family
+    data:
+      message: ''
+      data:
+        photo:
+        - url: http://10.10.10.11/snap.jpeg
+          caption: Es hat geklingelt!
+  mode: single
+- id: '1669284515736'
+  alias: Erinnerung Badezimmerfenster schließen
+  description: ''
+  use_blueprint:
+    path: homeassistant/reminder_to_close_a_window.yaml
+    input:
+      temperature_sensor: sensor.aussentemperatur
+      contact_sensor: binary_sensor.obergeschoss_fensterkontakt_badezimmer_fenster
+      first_timer: 40
+      second_timer: 60
+      temperature: 18
+      device_identifier: f7565c577bf749bca3f8c7190294288c

@@ -1,0 +1,3 @@
+name: Alarmmeldug Rauchmelder
+state_address: 0/4/10
+device_class: smoke

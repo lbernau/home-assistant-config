@@ -1,0 +1,3 @@
+name: Alarmmeldung Kondensatpumpe
+state_address: 0/6/3
+device_class: moisture

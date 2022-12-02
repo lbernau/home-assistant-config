@@ -1,0 +1,6 @@
+state_topic: "mower/mower/battery/charge"
+name: "Maehroboter Batterie"
+device_class: "battery"
+unit_of_measurement: "%"
+value_template: "{{ value | replace('%', '') }}"
+icon: mdi:battery

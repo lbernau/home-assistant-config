@@ -1,0 +1,3 @@
+state_topic: "mower/mower/substatus"
+name: "Maehroboter Sub-Status raw"
+icon: mdi:list-status

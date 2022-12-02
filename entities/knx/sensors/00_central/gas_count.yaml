@@ -1,0 +1,4 @@
+name: Gas Zählerstand
+state_address: 0/3/60
+type: volume
+state_class: total_increasing

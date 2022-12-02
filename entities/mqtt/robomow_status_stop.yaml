@@ -1,0 +1,3 @@
+state_topic: "mower/mower/stopped"
+name: "Maehroboter gestoppt"
+icon: mdi:octagon

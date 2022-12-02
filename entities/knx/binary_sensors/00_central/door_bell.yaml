@@ -1,0 +1,4 @@
+name: Türklingel
+state_address: 0/6/4
+reset_after: 1
+device_class: sound

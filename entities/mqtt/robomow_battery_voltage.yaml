@@ -1,0 +1,3 @@
+state_topic: "mower/health/voltage/batt"
+name: "Maehroboter Battery Voltage"
+unit_of_measurement: "V"

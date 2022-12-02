@@ -1,0 +1,4 @@
+state_topic: "mower/mower/statistic/hours"
+name: "Maehroboter Operation Hours"
+unit_of_measurement: "h"
+icon: mdi:timer-sand

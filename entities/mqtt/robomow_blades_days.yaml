@@ -1,0 +1,4 @@
+state_topic: "mower/mower/blades/days"
+name: "Maehroboter Messer Alter (Tage)"
+icon: mdi:terraform
+unit_of_measurement: "d"

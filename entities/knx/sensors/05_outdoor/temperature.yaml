@@ -1,0 +1,3 @@
+name: Außentemperatur
+state_address: '0/3/10'
+type: 'temperature'

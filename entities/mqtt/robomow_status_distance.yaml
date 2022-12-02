@@ -1,0 +1,3 @@
+state_topic: "mower/mower/distance"
+name: "Maehroboter Entfernung"
+unit_of_measurement: "m"

@@ -1,0 +1,3 @@
+state_topic: "mower/weather/data/humidity"
+name: "Maehroboter Wetter Luftfeuchtigkeit"
+unit_of_measurement: "%"

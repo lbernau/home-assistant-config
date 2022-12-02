@@ -1,0 +1,3 @@
+state_topic: "mower/mower/error/code"
+name: "Maehroboter Fehlercode"
+icon: mdi:alert-circle
